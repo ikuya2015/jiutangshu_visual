@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <title>@antv/g6 Tutorial</title>
+    <meta charset="UTF-8">
+    <style>
+        .input-container {
+            display: flex; /* 使用 Flexbox 布局 */
+            align-items: center; /* 垂直居中对齐 */
+            margin-bottom: 10px; /* 与下一个元素之间的间距 */
+        }
+
+        #chapterInput {
+            margin-right: 10px; /* 输入框与按钮之间的间距 */
+            width: 200px; /* 设置输入框宽度 */
+        }
+
+        #renderButton {
+            margin-right: 0px; /* 按钮与输入框之间的间距 */
+        }
+
+        #bookSelect, 
+        #chapterSelect {
+            width: 200px; /* 设置下拉框宽度 */
+        }
+    </style>
+  <script type="module" crossorigin src="/assets/index-1e4e3911.js"></script>
+</head>
+<body>
+    <div class="input-container">
+        <label for="bookSelect">选择书籍：</label>
+        <select id="bookSelect">
+            <option value="old_tang_book">旧唐书</option>
+            <option value="new_tang_book">新唐书</option>
+            <option value="song_history">宋史</option>
+        </select>
+    </div>
+
+    <div class="input-container">
+        <label for="chapterInput">请输入0开头的四位卷号，分上下或上中下卷的用ab或abc后缀表示，附表用f前缀表示：</label>
+        <input type="text" id="chapterInput" placeholder="示例：0001, 0199a等">
+    </div>
+
+    <div class="input-container">
+        <label for="chapterSelect">或选择分卷：</label>
+        <select id="chapterSelect">
+            <!-- 将在 JavaScript 中动态填充章节选项 -->
+        </select>
+    </div>
+    <div class="input-container">
+        <button id="renderButton">渲染图像</button>   
+        <span id="chapterName"></span> <!-- 显示章节名 -->
+    </div>
+    <div id="container"></div>
+    
+</body>
+</html>
