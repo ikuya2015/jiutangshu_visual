@@ -24,7 +24,12 @@
             width: 200px; /* 设置下拉框宽度 */
         }
     </style>
-  <script type="module" crossorigin src="./assets/index-f9277c5f.js"></script>
+    <style>
+        #chapterSelect {
+            width: 500px; /* 设置你想要的宽度，单位可以是px, %等 */
+        }
+    </style>
+  <script type="module" crossorigin src="./assets/index-12088857.js"></script>
 </head>
 <body>
     <div class="input-container">
@@ -53,13 +58,13 @@
     </div>
 
     <div class="input-container">
-        <label for="chapterInput">请输入0开头的四位卷号，分上下或上中下卷的用ab或abc后缀表示，附表用f前缀表示：</label>
+        <label for="chapterInput">请输入0开头的四位卷号，分上下或上中下卷的用ab/abc后缀表示，附表用f前缀表示，多卷用逗号分隔：</label>
         <input type="text" id="chapterInput" placeholder="示例：0001, 0199a等">
     </div>
 
     <div class="input-container">
-        <label for="chapterSelect">或选择分卷：</label>
-        <select id="chapterSelect">
+        <label for="chapterSelect">或选择分卷（按下ctrl多选）：</label>
+        <select id="chapterSelect" multiple>
             <!-- 将在 JavaScript 中动态填充章节选项 -->
         </select>
     </div>
